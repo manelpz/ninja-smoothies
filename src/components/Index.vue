@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    
+  <div class="index container">
+    <div class="card" v-for="smoothie in smoothies" :key="smoothie.id"></div>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ export default {
   data () {
     return {
       smoothies:[
-        {title: 'Ninja brew',slug:'ninja-brew'}
+        {title: 'Ninja brew',slug:'ninja-brew',ingredients:['bananas','coffee','milk'],id:1},
+        {title: 'Morning Mood', slug:'morning-mood',ingredients:['mango','lime','juice'],id:2}
       ]
     }
   }
