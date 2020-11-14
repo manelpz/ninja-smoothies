@@ -29,5 +29,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.index{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 60px;
+}
+.index .ingredients{
+  margin: 30px auto;  
+}
+.index .ingredients li{
+  display: inline-block;  
+}
 </style>
