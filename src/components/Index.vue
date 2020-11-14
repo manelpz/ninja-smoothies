@@ -9,7 +9,9 @@ export default {
   name: 'Index',
   data () {
     return {
-    
+      smoothies:[
+        {title: 'Ninja brew',slug:'ninja-brew'}
+      ]
     }
   }
 }
