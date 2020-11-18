@@ -24,6 +24,13 @@ export default {
         {title: 'Morning Mood', slug:'morning-mood',ingredients:['mango','lime','juice'],id:2}
       ]
     }
+  },
+  methods:{
+    deleteSmoothie(id){
+      this.smoothies = this.smoothies.filter(smoothies=>{
+        return smoothies.id != id
+      })
+    }
   }
 }
 </script>
