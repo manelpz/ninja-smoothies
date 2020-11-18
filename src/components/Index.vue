@@ -2,6 +2,7 @@
   <div class="index container">
     <div class="card" v-for="smoothie in smoothies" :key="smoothie.id">
       <div class="card-content">
+        <i class="material-icons">delete</i>
         <h2 class="indigo-text">{{ smoothie.title }}</h2>
         <ul class="ingredients">
           <li v-for="(ing,index) in smoothie.ingredients" :key="index">
