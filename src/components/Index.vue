@@ -29,6 +29,7 @@ export default {
     deleteSmoothie(id){
       this.smoothies = this.smoothies.filter(smoothies=>{
         return smoothies.id != id
+        
       })
     }
   }
