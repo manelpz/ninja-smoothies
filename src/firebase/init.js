@@ -2,7 +2,7 @@ import firebase from 'firebase'
 import firestore from 'firebase/firestore'
 
 //initialize Firebase
-var firebaseConfig = {
+var config = {
     apiKey: "AIzaSyBsjG8mEULDD26xyQaZx5kvf_NylgQALJg",
     authDomain: "udemy-ninja-smoothies-4afe2.firebaseapp.com",
     databaseURL: "https://udemy-ninja-smoothies-4afe2.firebaseio.com",
@@ -13,7 +13,7 @@ var firebaseConfig = {
     measurementId: "G-HW5JTT147H"
   };
   const firebaseApp = firebase.initializeApp(config);
-
+  firebaseApp.firestore().settings({timestampsInSnapshots: true})
   //export firestone database
 
   export default firebaseApp.firestore()
