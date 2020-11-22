@@ -26,9 +26,14 @@ export default {
   },
   methods:{
     deleteSmoothie(id){
-      this.smoothies = this.smoothies.filter(smoothies=>{
-        return smoothies.id != id
+      //this.smoothies = this.smoothies.filter(smoothies=>{
+        //return smoothies.id != id
+      //})
+      db.collection('smoothies').doc(id).delete()
+      .then(()=> {
+        
       })
+
     }
   },
   created(){
@@ -38,7 +43,7 @@ export default {
       snapshot.forEach(doc => {
        let smoothie = doc.data()
        smoothie.id = doc.id
-       this.smoothies.push()
+       this.smoothies.push(smoothie)
       })
     })
   }
