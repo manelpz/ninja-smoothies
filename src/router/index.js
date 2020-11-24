@@ -14,8 +14,8 @@ export default new Router({
     },
     {
       path:'/add-smoothie',
-      name:'AddSmothie',
-      component: AddSmothie
+      name:'AddSmoothie',
+      component: AddSmoothie
     }
   ]
 })
