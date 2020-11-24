@@ -10,7 +10,9 @@
                 <label for="add-ingredient">Add an ingredient:</label>
                 <input type="text" name="add-ingredient">
             </div>
-            <div class="field center-"></div>
+            <div class="field center-align">
+                <button class="btn pink">Add Smoothie</button>
+            </div>
         </form>
   </div>
 </template>
@@ -27,5 +29,16 @@ export default{
 </script>
 
 <style>
-
+    .add-smoothie{
+        margin-top: 60px;
+        padding: 20px;
+        max-width: 500px;
+    }
+    .add-smoothie h2{
+        font-size: 2em;
+        margin: 20px auto;
+    }
+    .add-smoothie .field{
+        margin: 20px auto;
+    }
 </style>
