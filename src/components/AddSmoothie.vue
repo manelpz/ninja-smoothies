@@ -22,12 +22,19 @@ export default{
     name:'AddSmoothie',
     data () {
         return{
-            title: null
+            title: null,
+            another: null,
+            ingredients: []
         }
     },
     methods:{
         AddSmoothie(){
             console.log(this.title)
+        },
+        addIng(){
+            if(this.another){
+                this.ingredients.push(this.another)
+            }
         }
     }
 }
