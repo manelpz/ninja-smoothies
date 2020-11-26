@@ -27,6 +27,7 @@ export default{
             ingredients: []
         }
     },
+    //some random text
     methods:{
         AddSmoothie(){
             console.log(this.title)
