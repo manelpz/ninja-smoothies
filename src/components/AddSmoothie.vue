@@ -11,6 +11,7 @@
                 <input type="text" name="add-ingredient" @keydown.tab.prevent="addIng" v-model="another">
             </div>
             <div class="field center-align">
+                <p v-if="feedback" class="red-text">{{feedback}}</p>
                 <button class="btn pink">Add Smoothie</button>
             </div>
         </form>
@@ -24,7 +25,8 @@ export default{
         return{
             title: null,
             another: null,
-            ingredients: []
+            ingredients: [],
+            feedback: null
         }
     },
     methods:{
@@ -35,6 +37,8 @@ export default{
             if(this.another){
                 this.ingredients.push(this.another)
                 console.log(this.ingredients)
+            }else{
+                this.feedback = 'You must enter a value to add an ingredient'
             }
         }
     }
