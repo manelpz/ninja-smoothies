@@ -1,2 +1,2 @@
 # ninja-smoothies
- vue.js & firebase project
+ vue.js, materialize & firebase project
