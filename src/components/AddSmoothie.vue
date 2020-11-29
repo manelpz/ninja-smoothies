@@ -8,11 +8,12 @@
             </div>
             <div v-for="(ing, index) in ingredients" :key="index">
                 <label for="ingredient">Ingredient:</label>
-                <input type="text" name="ingredient" v-model="ingredients[index]" value="6">
+                <input type="text" name="ingredient" v-model="ingredients[index]">
             </div>
             <div class="field add-ingredient">
                 <label for="add-ingredient">Add an ingredient:</label>
                 <input type="text" name="add-ingredient" @keydown.tab.prevent="addIng" v-model="another">
+
             </div>
             <div class="field center-align">
                 <p v-if="feedback" class="red-text">{{feedback}}</p>
@@ -41,6 +42,7 @@ export default{
             if(this.another){
                 this.ingredients.push(this.another)
                 console.log(this.ingredients)
+                this.another = null
             }else{
                 this.feedback = 'You must enter a value to add an ingredient'
             }
