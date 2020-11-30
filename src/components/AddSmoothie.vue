@@ -32,7 +32,8 @@ export default{
             title: null,
             another: null,
             ingredients: [],
-            feedback: null
+            feedback: null,
+            slug: null
         }
     },
     methods:{
@@ -40,6 +41,10 @@ export default{
             console.log(this.title)
             if(this.title){
                 this.feedback = null
+                db.collection('smoothies').add({
+                    title: this.title,
+                    ingredients: this.ingredients
+                })
             }else{
                 this.feedback = 'You must enter a smoothie title'
             }
