@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
 export default{
     name:'AddSmoothie',
     data () {
@@ -37,6 +38,11 @@ export default{
     methods:{
         AddSmoothie(){
             console.log(this.title)
+            if(this.title){
+                this.feedback = null
+            }else{
+                this.feedback = 'You must enter a smoothie title'
+            }
         },
         addIng(){
             if(this.another){
