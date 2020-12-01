@@ -48,10 +48,15 @@ export default{
                     remove: /[$*_+.'"!\-:@]/g,
                     lower: true
                 })
-                slug = this.slug
+                
                 db.collection('smoothies').add({
                     title: this.title,
-                    ingredients: this.ingredients
+                    ingredients: this.ingredients,
+                    slug: this.slug
+                }).then(()=>{
+                    this.$router.push({name: 'Index'})
+                }).catch(err =>{
+                    console.log(err)
                 })
             }else{
                 this.feedback = 'You must enter a smoothie title'
