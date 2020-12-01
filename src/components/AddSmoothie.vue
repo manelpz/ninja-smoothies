@@ -25,6 +25,8 @@
 
 <script>
 import db from '@/firebase/init'
+import slugify from 'slugify'
+
 export default{
     name:'AddSmoothie',
     data () {
