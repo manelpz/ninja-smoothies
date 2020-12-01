@@ -40,9 +40,15 @@ export default{
     },
     methods:{
         AddSmoothie(){
-            console.log(this.title)
             if(this.title){
                 this.feedback = null
+                // create a slug
+                this.slug = slugify(this.title,{
+                    replacement: '-',
+                    remove: /[$*_+.'"!\-:@]/g,
+                    lower: true
+                })
+                slug = this.slug
                 db.collection('smoothies').add({
                     title: this.title,
                     ingredients: this.ingredients
