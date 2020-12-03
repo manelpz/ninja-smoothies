@@ -20,8 +20,8 @@ export default new Router({
     },
     {
       path:'/edit-smoothie/:smoothie_slug',
-      name: 'EditSmmothie',
-      component: EditSmmothie
+      name: 'EditSmoothie',
+      component: EditSmoothie
     }
   ]
 })
