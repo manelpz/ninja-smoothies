@@ -5,12 +5,16 @@
 </template>
 
 <script>
+import db from '@/firebase/init'
     export default{
     name:'EditSmoothie',
     data () {
         return {
 
         }
+    },
+    created(){
+        let ref = db.collection('smoothies')
     }
     }
 </script>
