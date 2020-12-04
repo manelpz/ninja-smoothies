@@ -14,7 +14,7 @@ import db from '@/firebase/init'
         }
     },
     created(){
-        let ref = db.collection('smoothies')
+        let ref = db.collection('smoothies').where('slug', '==', this.$route.params.smoothie_slug)
     }
     }
 </script>
