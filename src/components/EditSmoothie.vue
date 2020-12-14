@@ -13,6 +13,7 @@ import db from '@/firebase/init'
 
         }
     },
+    //run after created element
     created(){
         let ref = db.collection('smoothies').where('slug', '==', this.$route.params.smoothie_slug)
         ref.get().then(snapshot => {
