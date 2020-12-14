@@ -49,7 +49,7 @@ export default{
                     remove: /[$*_+.'"!\-:@]/g,
                     lower: true
                 })
-                
+                //adding ingredients
                 db.collection('smoothies').add({
                     title: this.title,
                     ingredients: this.ingredients,
@@ -63,6 +63,7 @@ export default{
                 this.feedback = 'You must enter a smoothie title'
             }
         },
+        //filter the array to delete
         deleteIng(ing){
             this.ingredients = this.ingredients.filter(ingredient =>{
                 return ingredient != ing
