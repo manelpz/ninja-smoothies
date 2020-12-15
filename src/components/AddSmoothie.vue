@@ -29,6 +29,7 @@ import db from '@/firebase/init'
 import slugify from 'slugify'
 
 export default{
+    //adding values null
     name:'AddSmoothie',
     data () {
         return{

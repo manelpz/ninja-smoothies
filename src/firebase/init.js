@@ -12,6 +12,7 @@ var config = {
     appId: "1:261952979249:web:beacbf6026a9b2e7dc3010",
     measurementId: "G-HW5JTT147H"
   };
+  //config of firebase
   const firebaseApp = firebase.initializeApp(config);
   firebaseApp.firestore().settings({timestampsInSnapshots: true})
   //export firestone database
