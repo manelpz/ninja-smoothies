@@ -1,6 +1,6 @@
 <template>
     <div class="edit-smoothie container">
-        <h2>Edit a smoothie {{ this.$route.params.smoothie_slug}}</h2>
+        <h2>Edit a smoothie {{ smoothie.title }} smoothie</h2>
     </div>
 </template>
 
