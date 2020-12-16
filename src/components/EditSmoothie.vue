@@ -20,6 +20,7 @@ import db from '@/firebase/init'
         ref.get().then(snapshot => {
             snapshot.forEach(doc => {
                 this.smoothie = doc.data()
+                this.smoothie.id = doc.id
             })
         })
     }
