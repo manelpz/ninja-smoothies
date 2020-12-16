@@ -36,12 +36,8 @@ import db from '@/firebase/init'
 
         }
     },
-    deleteIng(ing){
-            this.ingredients = this.ingredients.filter(ingredient =>{
-                return ingredient != ing
-            })
-        },
-    addIng(){
+    methods:{
+        addIng(){
             if(this.another){
                 this.ingredients.push(this.another)
                 console.log(this.ingredients)
@@ -50,6 +46,12 @@ import db from '@/firebase/init'
                 this.feedback = 'You must enter a value to add an ingredient'
             }
         },
+        deleteIng(ing){
+            this.ingredients = this.ingredients.filter(ingredient =>{
+                return ingredient != ing
+            })
+        }
+    },
     //run after created element
     created(){
         let ref = db.collection('smoothies').where('slug', '==', this.$route.params.smoothie_slug)
