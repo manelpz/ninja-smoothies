@@ -1,14 +1,14 @@
 <template>
     <div v-if ="smoothie" class="edit-smoothie container">
         <h2>Edit a smoothie {{ smoothie.title }} smoothie</h2>
-        <form @submit.prevent="AddSmoothie">
+        <form @submit.prevent="EditSmoothie">
             <div class="field title">
-                <label for="title">Smoothie</label>
-                <input type="text" name="title" v-model="title">
+                <label for="title">Smoothie Title:</label>
+                <input type="text" name="title" v-model="smoothie.title">
             </div>
             <div v-for="(ing, index) in ingredients" :key="index" class="field">
                 <label for="ingredient">Ingredient:</label>
-                <input type="text" name="ingredient" v-model="ingredients[index]">
+                <input type="text" name="ingredient" v-model="smoothie.ingredients[index]">
                 <i class="material-icons delete" @click="deleteIng(ing)">delete</i>
             </div>
             <div class="field add-ingredient">
@@ -30,7 +30,9 @@ import db from '@/firebase/init'
     name:'EditSmoothie',
     data () {
         return {
-            smoothie: null
+            smoothie: null,
+            another:null,
+            feedback:null
 
         }
     },
