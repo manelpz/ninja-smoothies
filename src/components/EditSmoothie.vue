@@ -1,5 +1,5 @@
 <template>
-    <div class="edit-smoothie container">
+    <div v-if ="smoothie" class="edit-smoothie container">
         <h2>Edit a smoothie {{ smoothie.title }} smoothie</h2>
     </div>
 </template>
