@@ -50,5 +50,25 @@ import db from '@/firebase/init'
 </script>
 
 <style>
-
+    .add-smoothie{
+        margin-top: 60px;
+        padding: 20px;
+        max-width: 500px;
+    }
+    .add-smoothie h2{
+        font-size: 2em;
+        margin: 20px auto;
+    }
+    .add-smoothie .field{
+        margin: 20px auto;
+        position: relative;
+    }
+    .add-smoothie .delete{
+        position: absolute;
+        right: 0;
+        bottom: 16px;
+        color: #aaa;
+        font-size: 1.4em;
+        cursor: pointer;
+    }
 </style>
