@@ -36,6 +36,20 @@ import db from '@/firebase/init'
 
         }
     },
+    deleteIng(ing){
+            this.ingredients = this.ingredients.filter(ingredient =>{
+                return ingredient != ing
+            })
+        },
+    addIng(){
+            if(this.another){
+                this.ingredients.push(this.another)
+                console.log(this.ingredients)
+                this.another = null
+            }else{
+                this.feedback = 'You must enter a value to add an ingredient'
+            }
+        },
     //run after created element
     created(){
         let ref = db.collection('smoothies').where('slug', '==', this.$route.params.smoothie_slug)
@@ -50,20 +64,20 @@ import db from '@/firebase/init'
 </script>
 
 <style>
-    .add-smoothie{
+    .edit-smoothie{
         margin-top: 60px;
         padding: 20px;
         max-width: 500px;
     }
-    .add-smoothie h2{
+    .edit-smoothie h2{
         font-size: 2em;
         margin: 20px auto;
     }
-    .add-smoothie .field{
+    .edit-smoothie .field{
         margin: 20px auto;
         position: relative;
     }
-    .add-smoothie .delete{
+    .edit-smoothie .delete{
         position: absolute;
         right: 0;
         bottom: 16px;
