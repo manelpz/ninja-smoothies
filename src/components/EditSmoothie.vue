@@ -1,6 +1,26 @@
 <template>
     <div v-if ="smoothie" class="edit-smoothie container">
         <h2>Edit a smoothie {{ smoothie.title }} smoothie</h2>
+        <form @submit.prevent="AddSmoothie">
+            <div class="field title">
+                <label for="title">Smoothie</label>
+                <input type="text" name="title" v-model="title">
+            </div>
+            <div v-for="(ing, index) in ingredients" :key="index" class="field">
+                <label for="ingredient">Ingredient:</label>
+                <input type="text" name="ingredient" v-model="ingredients[index]">
+                <i class="material-icons delete" @click="deleteIng(ing)">delete</i>
+            </div>
+            <div class="field add-ingredient">
+                <label for="add-ingredient">Add an ingredient:</label>
+                <input type="text" name="add-ingredient" @keydown.tab.prevent="addIng" v-model="another">
+
+            </div>
+            <div class="field center-align">
+                <p v-if="feedback" class="red-text">{{feedback}}</p>
+                <button class="btn pink">Add Smoothie</button>
+            </div>
+        </form>
     </div>
 </template>
 
