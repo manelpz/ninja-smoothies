@@ -40,7 +40,7 @@ import db from '@/firebase/init'
         addIng(){
             if(this.another){
                 this.ingredients.push(this.another)
-                console.log(this.ingredients)
+              //  console.log(this.ingredients)
                 this.another = null
             }else{
                 this.feedback = 'You must enter a value to add an ingredient'
