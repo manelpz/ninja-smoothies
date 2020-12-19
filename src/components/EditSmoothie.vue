@@ -46,6 +46,7 @@ import db from '@/firebase/init'
                 this.feedback = 'You must enter a value to add an ingredient'
             }
         },
+        //adding delete method 
         deleteIng(ing){
             this.ingredients = this.ingredients.filter(ingredient =>{
                 return ingredient != ing
