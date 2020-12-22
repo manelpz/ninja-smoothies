@@ -40,6 +40,7 @@ export default{
             slug: null
         }
     },
+    //adding methods
     methods:{
         AddSmoothie(){
             if(this.title){
