@@ -7,6 +7,7 @@ import EditSmoothie from '@/components/EditSmoothie'
 Vue.use(Router)
 
 export default new Router({
+  //adding router
   routes: [
     {
       path: '/',
