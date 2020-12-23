@@ -39,16 +39,17 @@ import db from '@/firebase/init'
     methods:{
         addIng(){
             if(this.another){
-                this.ingredients.push(this.another)
+                this.smoothie.ingredients.push(this.another)
               //  console.log(this.ingredients)
                 this.another = null
+                this.feedback = null
             }else{
                 this.feedback = 'You must enter a value to add an ingredient'
             }
         },
         //adding delete method 
         deleteIng(ing){
-            this.ingredients = this.ingredients.filter(ingredient =>{
+            this.smoothie.ingredients = this.smoothie.ingredients.filter(ingredient =>{
                 return ingredient != ing
             })
         }
