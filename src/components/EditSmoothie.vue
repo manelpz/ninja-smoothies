@@ -37,6 +37,9 @@ import db from '@/firebase/init'
         }
     },
     methods:{
+        EditSmoothie(){
+            console.log(this.smoothie.title, this.smoothie.ingredients)
+        },
         addIng(){
             if(this.another){
                 this.smoothie.ingredients.push(this.another)
