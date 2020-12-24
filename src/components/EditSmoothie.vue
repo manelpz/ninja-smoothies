@@ -50,7 +50,7 @@ import slugify from 'slugify'
                     lower: true
                 })
                 //adding ingredients
-                db.collection('smoothies').doc(smoothie.id).update({
+                db.collection('smoothies').doc(this.smoothie.id).update({
                     title: this.title,
                     ingredients: this.ingredients,
                     slug: this.slug
