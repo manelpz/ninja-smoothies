@@ -41,7 +41,7 @@ import slugify from 'slugify'
     methods:{
         EditSmoothie(){
            // console.log(this.smoothie.title, this.smoothie.ingredients)
-           if(this.title){
+           if(this.smoothie.title){
                 this.feedback = null
                 // create a slug
                 this.smoothie.slug = slugify(this.smoothie.title,{
@@ -51,9 +51,9 @@ import slugify from 'slugify'
                 })
                 //adding ingredients
                 db.collection('smoothies').doc(this.smoothie.id).update({
-                    title: this.title,
-                    ingredients: this.ingredients,
-                    slug: this.slug
+                    title: this.smoothie.title,
+                    ingredients: this.smoothie.ingredients,
+                    slug: this.smoothie.slug
                 }).then(()=>{
                     this.$router.push({name: 'Index'})
                 }).catch(err =>{
@@ -66,7 +66,7 @@ import slugify from 'slugify'
         addIng(){
             if(this.another){
                 this.smoothie.ingredients.push(this.another)
-              //  console.log(this.ingredients)
+                //console.log(this.ingredients)
                 this.another = null
                 this.feedback = null
             }else{
