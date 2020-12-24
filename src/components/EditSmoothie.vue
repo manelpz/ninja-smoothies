@@ -1,6 +1,6 @@
 <template>
     <div v-if ="smoothie" class="edit-smoothie container">
-        <h2>Edit a smoothie {{ smoothie.title }} smoothie</h2>
+        <h2>Edit {{ smoothie.title }} smoothie</h2>
         <form @submit.prevent="EditSmoothie">
             <div class="field title">
                 <label for="title">Smoothie Title:</label>
@@ -35,13 +35,12 @@ import slugify from 'slugify'
             smoothie: null,
             another:null,
             feedback:null
-
         }
     },
     methods:{
         EditSmoothie(){
-           // console.log(this.smoothie.title, this.smoothie.ingredients)
-           if(this.smoothie.title){
+            console.log(this.smoothie.title, this.smoothie.ingredients)
+           /*if(this.smoothie.title){
                 this.feedback = null
                 // create a slug
                 this.smoothie.slug = slugify(this.smoothie.title,{
@@ -61,9 +60,11 @@ import slugify from 'slugify'
                 })
             }else{
                 this.feedback = 'You must enter a smoothie title'
-            }
+            }*/
         },
         addIng(){
+            console.log(this.ingredients)
+
             if(this.another){
                 this.smoothie.ingredients.push(this.another)
                 //console.log(this.ingredients)
