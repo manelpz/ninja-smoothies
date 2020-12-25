@@ -39,8 +39,9 @@ import slugify from 'slugify'
     },
     methods:{
         EditSmoothie(){
-            console.log(this.smoothie.title, this.smoothie.ingredients)
-           /*if(this.smoothie.title){
+            //console.log("hey")
+            //console.log(this.smoothie.title, this.smoothie.ingredients)
+           if(this.smoothie.title){
                 this.feedback = null
                 // create a slug
                 this.smoothie.slug = slugify(this.smoothie.title,{
@@ -60,7 +61,7 @@ import slugify from 'slugify'
                 })
             }else{
                 this.feedback = 'You must enter a smoothie title'
-            }*/
+            }
         },
         addIng(){
             console.log(this.ingredients)
