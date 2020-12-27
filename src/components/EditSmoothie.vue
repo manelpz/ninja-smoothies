@@ -68,7 +68,6 @@ import slugify from 'slugify'
 
             if(this.another){
                 this.smoothie.ingredients.push(this.another)
-                //console.log(this.ingredients)
                 this.another = null
                 this.feedback = null
             }else{
