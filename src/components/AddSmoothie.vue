@@ -65,6 +65,9 @@ export default{
                 this.feedback = 'You must enter a smoothie title'
             }
         },
+        //addming comment
+
+        
         //filter the array to delete
         deleteIng(ing){
             this.ingredients = this.ingredients.filter(ingredient =>{
