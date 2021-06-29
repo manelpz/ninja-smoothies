@@ -1,7 +1,7 @@
 # ninja-smoothies
  vue.js, materialize & firebase project
  
- 
+ ***
  Exercise from the Udemy Course [build web apps with vuejs firebase](https://www.udemy.com/course/build-web-apps-with-vuejs-firebase/)
  ***
  (deployment link) - https://udemy-ninja-smoothies-4afe2.web.app/ 
